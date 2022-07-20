@@ -1,8 +1,19 @@
 plugins {
     id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
 }
 
-group 'org.example'
+javafx {
+    version = "17.0.1"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+application {
+    mainClassName = "org.example.App"
+}
+
+group 'org.exampl'
 version '1.0-SNAPSHOT'
 
 repositories {
