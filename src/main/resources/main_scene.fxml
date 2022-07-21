@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.GridPane?>
+
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.FXMLController">
+    <TabPane>
+        <Tab text="posts">
+            <TableView fx:id="postsTable">
+                <columns>
+                    <TableColumn text="post_id" >
+                        <cellValueFactory><PropertyValueFactory property="postId" /></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="text">
+                        <cellValueFactory><PropertyValueFactory property="text" /></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="author_id">
+                        <cellValueFactory><PropertyValueFactory property="authorId" /></cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </Tab>
+        <Tab text="users">
+            <TableView>
+                <columns>
+                    <TableColumn text="user_id"/>
+                    <TableColumn text="name"/>
+                </columns>
+            </TableView>
+        </Tab>
+        <Tab text="comments">
+            <TableView>
+                <columns>
+                    <TableColumn text="commentId"/>
+                    <TableColumn text="post_id"/>
+                    <TableColumn text="author_id"/>
+                    <TableColumn text="text"/>
+                </columns>
+            </TableView>
+        </Tab>
+    </TabPane>
+</GridPane>
