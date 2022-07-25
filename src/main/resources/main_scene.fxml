@@ -28,18 +28,30 @@
         <Tab text="users">
             <TableView>
                 <columns>
-                    <TableColumn text="user_id"/>
-                    <TableColumn text="name"/>
+                    <TableColumn text="user_id" >
+                        <cellValueFactory><PropertyValueFactory property="userId" /></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="name">
+                        <cellValueFactory><PropertyValueFactory property="name" /></cellValueFactory>
+                    </TableColumn>
                 </columns>
             </TableView>
         </Tab>
         <Tab text="comments">
             <TableView>
                 <columns>
-                    <TableColumn text="commentId"/>
-                    <TableColumn text="post_id"/>
-                    <TableColumn text="author_id"/>
-                    <TableColumn text="text"/>
+                    <TableColumn text="comment_id">
+                        <cellValueFactory><PropertyValueFactory property="commentId" /></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="post_id">
+                        <cellValueFactory><PropertyValueFactory property="postId" /></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="author_id">
+                        <cellValueFactory><PropertyValueFactory property="authorId" /></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text="text">
+                        <cellValueFactory><PropertyValueFactory property="text" /></cellValueFactory>
+                    </TableColumn>
                 </columns>
             </TableView>
         </Tab>
