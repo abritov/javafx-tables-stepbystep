@@ -9,9 +9,9 @@
 
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.FXMLController">
-    <TabPane>
+    <TabPane fx:id="tabs">
         <Tab text="posts">
-            <TableView fx:id="postsTable">
+            <TableView fx:id="postsTable" onMouseClicked="#switchTables">
                 <columns>
                     <TableColumn text="post_id" >
                         <cellValueFactory><PropertyValueFactory property="postId" /></cellValueFactory>
@@ -19,14 +19,14 @@
                     <TableColumn text="text">
                         <cellValueFactory><PropertyValueFactory property="text" /></cellValueFactory>
                     </TableColumn>
-                    <TableColumn text="author_id">
+                    <TableColumn fx:id="postAuthorIdColumn" text="author_id">
                         <cellValueFactory><PropertyValueFactory property="authorId" /></cellValueFactory>
                     </TableColumn>
                 </columns>
             </TableView>
         </Tab>
         <Tab text="users">
-            <TableView>
+            <TableView fx:id="usersTable">
                 <columns>
                     <TableColumn text="user_id" >
                         <cellValueFactory><PropertyValueFactory property="userId" /></cellValueFactory>
@@ -38,15 +38,15 @@
             </TableView>
         </Tab>
         <Tab text="comments">
-            <TableView>
+            <TableView fx:id="commentsTable" onMouseClicked="#switchTables">
                 <columns>
                     <TableColumn text="comment_id">
                         <cellValueFactory><PropertyValueFactory property="commentId" /></cellValueFactory>
                     </TableColumn>
-                    <TableColumn text="post_id">
+                    <TableColumn fx:id="commentsPostIdColumn" text="post_id">
                         <cellValueFactory><PropertyValueFactory property="postId" /></cellValueFactory>
                     </TableColumn>
-                    <TableColumn text="author_id">
+                    <TableColumn fx:id="commentsAuthorIdColumn" text="author_id">
                         <cellValueFactory><PropertyValueFactory property="authorId" /></cellValueFactory>
                     </TableColumn>
                     <TableColumn text="text">
